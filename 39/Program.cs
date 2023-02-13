@@ -20,15 +20,13 @@ int[] GetRandomArray(int size, int minValue, int maxValue)//метод по со
 
 int[] ObratMassiv (int[] arr)
 {
-  int[] ArrayMulty  = new int[arr.Length];
-  for (int i = 0; i < ArrayMulty.Length; i++)  {
+  int[] ArrayMulty  = new int[arr.Length]; //создаем новый массив длинной как изначальный
+  for (int i = 0; i < ArrayMulty.Length; i++)  { //цикл для перебора массива
 
-    ArrayMulty[i]=arr[arr.Length-1-i];//элемент массива умножения = 0 элемент исходного массива * последний(Length-1). В обоих случаях добавлен счётчик, спереди с положительным знаком, сзади с отрицательным
+    ArrayMulty[i]=arr[arr.Length-1-i];//элемент массива = последнему элементу массива. со счётчиком
   }
-  return ArrayMulty;//выводим перемноженный массив как результат работы метода
+  return ArrayMulty;//выводим перевернутый массив как результат работы метода
 }
-int[] res = (ObratMassiv(array));//для удобства создаем переменную res и указываем туда вызов метода умножения с переданным исходным массивом
-
-//Console.WriteLine(res);
+int[] res = (ObratMassiv(array));//для удобства создаем переменную res и указываем туда вызов метода переворота массива
 
 Console.WriteLine(String.Join(" ", res)); //выводим на экран итоговый результат в виде массива.
