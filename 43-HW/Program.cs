@@ -83,4 +83,31 @@ double k2 = int.Parse(Console.ReadLine());//Записали число k2
 // Console.Write(CoordY);
 //Console.WriteLine(TochkaXY);
 
-Console.WriteLine($"Точка пересечения прямых  ({CoordX} ; {CoordY})");
+Console.WriteLine($"Точка пересечения прямых  ({CoordX} ; {CoordY}) найдено линейно");
+
+
+  double TochkaX (double b1, double k1, double b2, double k2)
+  {
+  double CoordX=0;
+  double CoordY=0;
+  CoordX= (b2-b1)/(k1-k2);
+  CoordY=(k2*CoordX+4);  
+  return (CoordX);
+   }
+
+double TochkaY (double b1, double k1, double b2, double k2)
+  {
+  double CoordX=0;
+  double CoordY=0;
+  CoordX= (b2-b1)/(k1-k2);
+  CoordY=(k2*CoordX+4);  
+  return (CoordY);
+   }
+
+
+
+double TochkaXRes = (TochkaX(b1, k1, b2, k2));
+double TochkaYRes = (TochkaY(b1, k1, b2, k2));
+
+
+Console.WriteLine($"Точка пересечения прямых  ({TochkaXRes} ; {TochkaYRes}) найдено через 2 метода");
